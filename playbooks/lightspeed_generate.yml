@@ -3,6 +3,9 @@
   hosts: localhost
   gather_facts: false
   tasks:
+    - name: ai_lightspeed_prompt
+      ansible.builtin.debug:
+        msg: "{{ ai_lightspeed_prompt }}"
     - name: Include vars
       ansible.builtin.include_vars:
         file: "../vars/ls_vars.yml"
